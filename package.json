@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "src/server.ts",
   "scripts": {
     "start": "node dist/server.js",
     "build": "npx prisma generate && npx prisma migrate deploy && tsc",
