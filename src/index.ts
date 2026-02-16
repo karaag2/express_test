@@ -10,6 +10,15 @@ import cookieParser from 'cookie-parser'
 //Importing routes
 import TASK from '@/routes/taskRoute.js'
 import AUTH from '@/routes/authRoutes.js'
+
+import dotenv from 'dotenv'
+import path from 'path'
+
+// ✅ Charger .env depuis la racine du projet
+dotenv.config({
+    path: path.resolve(__dirname, '../.env')  // Remonte d'un niveau
+})
+
 await connectDB();
 const app = express();
 const PORT =process.env.PORT || 3000
