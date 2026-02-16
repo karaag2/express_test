@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken'
 import type {Response} from 'express'
 
 const secret = process.env.JWT_SECRET || 'superSecret'
-export const generateToken = (userId: number, res: Response): string => {
+const generateToken = (userId: number, res: Response): string => {
     const secret = process.env.JWT_SECRET
 
     if (!secret) {
@@ -26,3 +26,4 @@ export const generateToken = (userId: number, res: Response): string => {
 
     return token
 }
+export default generateToken
