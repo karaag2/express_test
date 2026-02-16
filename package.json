@@ -5,8 +5,10 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "node src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "build": "npx prisma generate && npx prisma migrate deploy && tsc",
+    "dev": "ts-node src/server.ts",
+    "migrate": "npx prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
