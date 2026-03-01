@@ -14,7 +14,7 @@ import AUTH from '@/routes/authRoutes.js'
 import dotenv from 'dotenv'
 import path from 'path'
 
-// ✅ Charger .env depuis la racine du projet
+
 dotenv.config({
     path: path.resolve(__dirname, '../.env')  // Remonte d'un niveau
 })
